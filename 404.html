@@ -1,0 +1,20 @@
+<p>Redirecting to archive...</p>
+
+<script type="text/javascript">
+    let href = window.location.href;
+    
+    if (href.contains("forum.modme.co/threads/")) {
+        let parts = href.split("/");
+
+        if (parts.length < 5) {
+            window.location.href = "https://forum.modme.co";
+        } else {
+            let path = parts[4];
+            let split = path.split(".");
+
+            window.location.href = `https://forum.modme.co/wiki/threads/${split[split.length - 1]}.html`;
+        }
+    } else {
+        window.location.href = "https://forum.modme.co";
+    }
+</script>
