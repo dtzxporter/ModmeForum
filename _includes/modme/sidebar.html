@@ -6,15 +6,3 @@ Menu:
   <li><a href="https://tools.modme.co">Tools &amp; Applications</a></li>
   <li><a href="https://wiki.modme.co">Wiki</a></li>
 </ul>
-
-Forum Archive:
-
-<ul>
-  {% for post in site.pages %}
-    {% if post.path contains 'wiki/forums' %}
-    <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    </li>
-    {% endif %}
-  {% endfor %}
-</ul>

@@ -2,5 +2,13 @@
 
 An open-source community driven game modding wiki, founded by [DTZxPorter](https://twitter.com/dtzxporter), built for the community.
 
-## Welcome
-As you can see, we have migrated all of the forum content for you to browse.
+## Forum Archive:
+<ul>
+  {% for post in site.pages %}
+    {% if post.path contains 'wiki/forums' %}
+    <li>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </li>
+    {% endif %}
+  {% endfor %}
+</ul>
