@@ -2,8 +2,8 @@
 
 <script type="text/javascript">
     let href = window.location.href;
-    
-    if (href.contains("forum.modme.co/threads/")) {
+
+    if (href.includes("forum.modme.co/threads/")) {
         let parts = href.split("/");
 
         if (parts.length < 5) {
